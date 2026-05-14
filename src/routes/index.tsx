@@ -3,7 +3,10 @@ import { Layout } from "@/components/Layout";
 import hero from "@/assets/hero-chamber.jpg";
 import grassroots from "@/assets/grassroots.jpg";
 import dataImg from "@/assets/data.jpg";
-import podium from "@/assets/podium.jpg";
+import podium from "@/assets/nigeria-rally.jpg";
+import leaderPortrait from "@/assets/leader-portrait.jpg";
+import voter from "@/assets/voter.jpg";
+import lagos from "@/assets/lagos-skyline.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
