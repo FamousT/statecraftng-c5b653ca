@@ -26,7 +26,7 @@ export function SiteNav() {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <span className="h-2 w-2 rotate-45 bg-gold" />
-          <span className="font-sans text-xs font-semibold tracking-[0.32em] text-foreground">
+          <span className={`font-sans text-xs font-semibold tracking-[0.32em] transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>
             STATECRAFT
           </span>
         </Link>
@@ -35,9 +35,9 @@ export function SiteNav() {
             <Link
               key={l.to}
               to={l.to}
-              className="text-[12px] tracking-[0.18em] uppercase text-foreground/70 hover:text-foreground transition-colors"
+              className={`text-[12px] tracking-[0.18em] uppercase transition-colors ${scrolled ? "text-foreground/70 hover:text-foreground" : "text-white/80 hover:text-white"}`}
               activeOptions={{ exact: true }}
-              activeProps={{ className: "text-foreground border-b border-gold pb-0.5" }}
+              activeProps={{ className: "border-b border-gold pb-0.5" }}
             >
               {l.label}
             </Link>
@@ -45,7 +45,7 @@ export function SiteNav() {
         </nav>
         <Link
           to="/contact"
-          className="hidden md:inline-flex items-center gap-2 text-[11px] tracking-[0.22em] uppercase border border-foreground px-4 py-2 hover:bg-foreground hover:text-background transition-colors"
+          className={`hidden md:inline-flex items-center gap-2 text-[11px] tracking-[0.22em] uppercase border px-4 py-2 transition-colors ${scrolled ? "border-foreground text-foreground hover:bg-foreground hover:text-background" : "border-white text-white hover:bg-white hover:text-ink"}`}
         >
           Engage Us <span aria-hidden>→</span>
         </Link>
