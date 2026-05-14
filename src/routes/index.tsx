@@ -268,10 +268,53 @@ function Home() {
         </div>
       </section>
 
+      {/* GALLERY — FACES OF 2027 */}
+      <section className="bg-background py-28 lg:py-40">
+        <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
+          <div className="grid lg:grid-cols-12 gap-12 mb-16">
+            <div className="lg:col-span-5">
+              <div className="eyebrow text-emerald-deep">§ VI — The Republic</div>
+              <h2 className="display text-[clamp(2.25rem,5vw,4rem)] mt-6">
+                A nation of <em className="text-emerald-deep">200 million</em> stories.
+              </h2>
+            </div>
+            <p className="lg:col-span-6 lg:col-start-7 self-end text-foreground/75 leading-relaxed text-lg">
+              From the polling units of the South-East to the markets of Kano,
+              from Lagos boardrooms to the savannahs of the North — every campaign
+              we run begins with the people whose lives the next vote will shape.
+            </p>
+          </div>
+          <div className="grid grid-cols-12 grid-rows-2 gap-4 h-[80vh]">
+            <div className="col-span-12 md:col-span-5 row-span-2 relative overflow-hidden group">
+              <img src={leaderPortrait} alt="Portrait of a Nigerian statesman" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-ink to-transparent p-8">
+                <div className="eyebrow text-gold">The Candidate</div>
+                <p className="font-serif text-bone text-2xl mt-2">Composure under contest.</p>
+              </div>
+            </div>
+            <div className="col-span-12 md:col-span-7 row-span-1 relative overflow-hidden group">
+              <img src={lagos} alt="Lagos skyline at dusk" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-ink/90 to-transparent p-6">
+                <div className="eyebrow text-gold">The Centres</div>
+                <p className="font-serif text-bone text-xl mt-1">Lagos · Abuja · Port Harcourt · Kano</p>
+              </div>
+            </div>
+            <div className="col-span-12 md:col-span-7 row-span-1 relative overflow-hidden group">
+              <img src={voter} alt="Nigerian voter with PVC and inked finger" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-ink/90 to-transparent p-6">
+                <div className="eyebrow text-gold">The Voter</div>
+                <p className="font-serif text-bone text-xl mt-1">Every PVC is a mandate in waiting.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="relative overflow-hidden bg-emerald-deep text-bone">
-        <img src={podium} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-25 mix-blend-luminosity" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-emerald-deep/70 to-transparent" />
+      <section className="relative overflow-hidden bg-ink text-bone">
+        <img src={podium} alt="Nigerian rally with flags at sunset" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12 py-32 lg:py-48 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
             <div className="eyebrow text-gold">The Road to 2027</div>
