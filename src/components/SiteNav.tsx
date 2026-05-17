@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import logo from "@/assets/statecraft-logo.png";
 
 const links = [
@@ -51,6 +53,40 @@ export function SiteNav() {
         >
           Engage Us <span aria-hidden>→</span>
         </Link>
+
+        <Sheet>
+          <SheetTrigger asChild>
+            <button
+              className={`md:hidden p-2 -mr-2 transition-colors ${scrolled ? "text-foreground" : "text-white"}`}
+              aria-label="Open menu"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-3/4 sm:max-w-sm bg-ink border-l border-white/10">
+            <div className="flex flex-col gap-8 mt-8">
+              {links.map((l) => (
+                <SheetClose key={l.to} asChild>
+                  <Link
+                    to={l.to}
+                    className="text-[13px] tracking-[0.18em] uppercase text-white/80 hover:text-white transition-colors"
+                    activeOptions={{ exact: true }}
+                  >
+                    {l.label}
+                  </Link>
+                </SheetClose>
+              ))}
+              <SheetClose asChild>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 text-[11px] tracking-[0.22em] uppercase border border-white text-white px-4 py-2 w-fit hover:bg-white hover:text-ink transition-colors"
+                >
+                  Engage Us <span aria-hidden>→</span>
+                </Link>
+              </SheetClose>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   );
