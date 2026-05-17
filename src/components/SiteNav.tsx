@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import logo from "@/assets/statecraft-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
