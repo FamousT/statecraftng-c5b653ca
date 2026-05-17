@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import logo from "@/assets/statecraft-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -24,11 +25,12 @@ export function SiteNav() {
       }`}
     >
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="h-2 w-2 rotate-45 bg-gold" />
-          <span className={`font-sans text-xs font-semibold tracking-[0.32em] transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>
-            STATECRAFT
-          </span>
+        <Link to="/" className="flex items-center group">
+          <img
+            src={logo}
+            alt="Statecraft"
+            className="h-8 w-auto"
+          />
         </Link>
         <nav className="hidden md:flex items-center gap-10">
           {links.map((l) => (
