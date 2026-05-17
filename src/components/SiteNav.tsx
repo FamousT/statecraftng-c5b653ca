@@ -29,7 +29,7 @@ export function SiteNav() {
           <img
             src={logo}
             alt="Statecraft"
-            className="h-8 w-auto brightness-0 invert"
+            className="h-8 w-auto"
           />
         </Link>
         <nav className="hidden md:flex items-center gap-10">
