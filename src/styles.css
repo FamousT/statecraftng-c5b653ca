@@ -54,7 +54,7 @@
 
   --background: var(--bone);
   --foreground: var(--ink);
-  --card: oklch(0.99 0.008 85);
+  --card: oklch(1 0 0);
   --card-foreground: var(--ink);
   --popover: var(--bone);
   --popover-foreground: var(--ink);
