@@ -25,11 +25,12 @@ export function SiteNav() {
       }`}
     >
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="h-2 w-2 rotate-45 bg-gold" />
-          <span className={`font-sans text-xs font-semibold tracking-[0.32em] transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>
-            STATECRAFT
-          </span>
+        <Link to="/" className="flex items-center group">
+          <img
+            src={logo}
+            alt="Statecraft"
+            className={`h-8 w-auto transition-all duration-500 ${scrolled ? "" : "brightness-0 invert"}`}
+          />
         </Link>
         <nav className="hidden md:flex items-center gap-10">
           {links.map((l) => (
